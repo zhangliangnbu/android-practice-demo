@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_height="21dp"
+        android:gravity="center"
+        tools:text="宝宝"
+        android:textSize="13dp"
+        android:textColor="#6787c7"
+        android:background="#ff99ff"/>

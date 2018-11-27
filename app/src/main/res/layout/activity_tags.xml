@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tags.TagsActivity">
+
+    <!--<me.gujun.android.taggroup.TagGroup-->
+        <!--android:id="@+id/tag_group"-->
+        <!--style="@style/TagGroup"-->
+        <!--android:layout_marginTop="10dp"/>-->
+
+    <!--<me.gujun.android.taggroup.TagGroup-->
+        <!--android:id="@+id/tag_group_checkable"-->
+        <!--style="@style/TagGroup"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/tag_group"/>-->
+
+    <!--<me.gujun.android.taggroup.TagGroup-->
+        <!--android:id="@+id/tag_group_delete"-->
+        <!--style="@style/TagGroup"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--app:atg_isAppendMode="true"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/tag_group_checkable"-->
+        <!--/>-->
+
+</android.support.constraint.ConstraintLayout>
