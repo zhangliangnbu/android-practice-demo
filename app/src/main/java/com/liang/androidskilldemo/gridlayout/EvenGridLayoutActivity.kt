@@ -80,13 +80,13 @@ class EvenGridLayoutActivity : Activity() {
     class EvenItemDecoration(private val space: Int, private val column: Int) : RecyclerView.ItemDecoration() {
         override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
             val position = parent.getChildAdapterPosition(view)
-            // 每个span分配的间隔大小
-            val spanSpace = space * (column + 1) / column
+            // 每列分配的padding大小，包括左padding和右padding，如果图片足够宽则padding为0
+            val colPadding = space * (column + 1) / column
             // 列索引
             val colIndex = position % column
-            // 列左、右间隙
-            outRect.left = space * (colIndex + 1) - spanSpace * colIndex
-            outRect.right = spanSpace * (colIndex + 1) - space * (colIndex + 1)
+            // 列左、右padding。先计算每列的左padding，然后找出规律，右padding=space-左padding
+            outRect.left = space * (colIndex + 1) - colPadding * colIndex
+            outRect.right = colPadding * (colIndex + 1) - space * (colIndex + 1)
             // 行间距
             if (position >= column) {
                 outRect.top = space
