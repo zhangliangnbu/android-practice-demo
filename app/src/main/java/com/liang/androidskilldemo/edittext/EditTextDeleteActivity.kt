@@ -7,6 +7,11 @@ import android.text.TextWatcher
 import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_edit_text_delete.*
 
+/**
+ * 1. EditText长度限制
+ * 2. 超过长度则提示
+ * 3. 从光标处删除超出的部分
+ */
 class EditTextDeleteActivity : AppCompatActivity() {
     companion object {
         private const val TAG = "EditTextDelete"

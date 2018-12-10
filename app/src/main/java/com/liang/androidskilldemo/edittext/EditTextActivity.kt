@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity
 import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_edit_text.*
 
+/**
+ * 光标显示与否逻辑
+ */
 class EditTextActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
