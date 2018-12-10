@@ -12,7 +12,6 @@ import android.view.ViewGroup
 import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_even_grid_layout.*
 import kotlinx.android.synthetic.main.item_image.view.*
-import kotlinx.android.synthetic.main.item_text.view.*
 
 
 class EvenGridLayoutActivity : Activity() {
@@ -50,7 +49,7 @@ class EvenGridLayoutActivity : Activity() {
 
         rv_items.apply {
             layoutManager = GridLayoutManager(context, 4, RecyclerView.VERTICAL, false)
-            addItemDecoration(EvenItemDecoration(dp2px(context, 10), 4))
+            addItemDecoration(EvenItemDecoration(dp2px(context, 20), 4))
             adapter = imageAdapter
         }
     }
@@ -61,7 +60,7 @@ class EvenGridLayoutActivity : Activity() {
             // 动态设置图片大小 保证宽高相等
             val ivSize = (getScreenContentWidth(parent.context) - dp2px(parent.context, 10) * 5) / 4
 //            view.iv_image.layoutParams.width = 1000
-            view.tv_tag.layoutParams.height = ivSize
+            view.iv_image.layoutParams.height = ivSize
             return ViewHolder(view)
         }
 
@@ -79,18 +78,20 @@ class EvenGridLayoutActivity : Activity() {
 
     class EvenItemDecoration(private val space: Int, private val column: Int) : RecyclerView.ItemDecoration() {
         override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
-            val position = parent.getChildAdapterPosition(view)
-            // 每列分配的padding大小，包括左padding和右padding，如果图片足够宽则padding为0
-            val colPadding = space * (column + 1) / column
-            // 列索引
-            val colIndex = position % column
-            // 列左、右padding。先计算每列的左padding，然后找出规律，右padding=space-左padding
-            outRect.left = space * (colIndex + 1) - colPadding * colIndex
-            outRect.right = colPadding * (colIndex + 1) - space * (colIndex + 1)
-            // 行间距
-            if (position >= column) {
-                outRect.top = space
-            }
+//            val position = parent.getChildAdapterPosition(view)
+//            // 每列分配的padding大小，包括左padding和右padding，如果图片足够宽则padding为0
+//            val colPadding = space * (column + 1) / column
+//            // 列索引
+//            val colIndex = position % column
+//            // 列左、右padding。先计算每列的左padding，然后找出规律，右padding=space-左padding
+//            outRect.left = space * (colIndex + 1) - colPadding * colIndex
+//            outRect.right = colPadding * (colIndex + 1) - space * (colIndex + 1)
+//            // 行间距
+//            if (position >= column) {
+//                outRect.top = space
+//            }
+            outRect.left = space
+            outRect.right = space
         }
     }
 }

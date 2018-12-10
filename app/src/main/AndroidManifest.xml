@@ -86,8 +86,52 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".edittext.EditTextActivity"
-                  android:label="EditTextSample"
+        <activity
+                android:name=".edittext.EditTextActivity"
+                android:label="EditTextSample"
+                android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".SwitchActivity"
+                android:label="SwitchSample"
+                android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".RadioGroupActivity"
+                android:label="RadioGroupSample"
+                android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".BackgroundUpdateActivity"
+                android:label="BackgroundUpdateSample"
+                android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".edittext.EditTextDeleteActivity"
+                  android:label="EditTextDeleteSample"
                   android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.RUN"/>
