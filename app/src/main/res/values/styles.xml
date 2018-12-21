@@ -6,6 +6,15 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!--覆盖主题样式-->
+        <item name="android:colorBackground">@color/white_light</item>
+        <item name="buttonStyle">@style/NormalButton</item>
     </style>
+
+    <style name="NormalButton">
+        <item name="android:background">@drawable/shape_button_normal</item>
+    </style>
+
 
 </resources>

@@ -1,17 +1,17 @@
 package com.liang.androidskilldemo.bitmap
 
-import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_bitmap_adjust.*
 import utils.BitmapUtils
 import utils.FileUtils
 
-class BitmapAdjustActivity : Activity() {
+class BitmapAdjustActivity : AppCompatActivity() {
 
     companion object {
         const val REQUEST_CODE_ADD_PICTURE = 1001

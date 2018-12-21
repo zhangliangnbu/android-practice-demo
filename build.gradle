@@ -2,6 +2,7 @@
 
 buildscript {
     ext.kotlin_version = '1.2.71'
+    ext.anko_version='0.10.8'
     repositories {
         google()
         jcenter()
@@ -21,6 +22,9 @@ allprojects {
         maven {
             url uri("$homeDir/weex/repos/")
         }
+//        maven {
+//            url "https://dl.bintray.com/zhangliang/android"
+//        }
         google()
         jcenter()
     }

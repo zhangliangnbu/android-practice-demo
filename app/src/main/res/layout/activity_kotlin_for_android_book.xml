@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kotlinforandroiddevelopers.KotlinForAndroidBookActivity">
+
+    <TextView
+        android:id="@+id/tv_data_from_net"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:hint="网络数据"
+        android:padding="5dp"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        tools:text="哈哈哈"/>
+
+</android.support.constraint.ConstraintLayout>

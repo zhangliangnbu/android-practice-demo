@@ -48,8 +48,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-
-
     internal inner class ResolveInfoAdapter(context : Context, private val resolves : List<ResolveInfo>) : RecyclerView.Adapter<ResolveInfoAdapter.ResolveInfoViewHolder>() {
         private val inflater : LayoutInflater = LayoutInflater.from(context)
         private val pm : PackageManager = context.packageManager

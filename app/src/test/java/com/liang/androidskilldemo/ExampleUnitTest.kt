@@ -18,9 +18,9 @@ class ExampleUnitTest {
 
     @Test
     fun testSS2MMSS() {
-        val millis = 500000000L
+        val millis = 3000L
         val tz = TimeZone.getTimeZone("UTC")
-        val df = SimpleDateFormat("hh:mm:ss")
+        val df = SimpleDateFormat("HH:mm:ss")
         df.timeZone = tz
         val time = df.format(Date(millis))
         println(time)
