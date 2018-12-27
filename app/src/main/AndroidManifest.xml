@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
             android:allowBackup="true"
@@ -136,9 +137,9 @@
                 android:name=".edittext.EditTextDeleteActivity"
                 android:label="EditTextDeleteSample"
                 android:parentActivityName=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.RUN"/>
+
                 <category android:name="com.liang.skilldemo.Sample"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
@@ -154,9 +155,41 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity
+                android:name=".kotlinforandroiddevelopers.KotlinForAndroidBookActivity"
+                android:label="KotlinForAndroidBookSample"
+                android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
 
-        <activity android:name=".kotlinforandroiddevelopers.KotlinForAndroidBookActivity"
-                  android:label="KotlinForAndroidBookSample"
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".drawable.DrawableActivity"
+                android:label="DrawableSample"
+                android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".window.WindowSampleActivity"
+                android:label="WindowSample"
+                android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".TextViewActivity"
+                  android:label="TextViewSample"
                   android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.RUN"/>

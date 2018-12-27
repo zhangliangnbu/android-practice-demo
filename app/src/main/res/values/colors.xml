@@ -10,5 +10,6 @@
     <color name="black_light">#333333</color>
     <color name="black">#000000</color>
     <color name="red">#ff8080</color>
-    <color name="green">#59b370</color>
+    <color name="green">#9cbe29</color>
+    <color name="blue">#084d94</color>
 </resources>
