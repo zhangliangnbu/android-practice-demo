@@ -3,6 +3,7 @@ package com.liang.androidskilldemo.window
 import android.content.Intent
 import android.graphics.PixelFormat
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import android.support.v7.app.AppCompatActivity
@@ -22,6 +23,7 @@ class WindowSampleActivity : AppCompatActivity() {
     private var isAppWindowShow = false
     private var isInnerWindowShow = false
     private var isSystemWindowShow = false
+    private var isSystem2WindowShow = false
 
     private val appButton by lazy {
         val button = Button(this)
@@ -53,6 +55,16 @@ class WindowSampleActivity : AppCompatActivity() {
         return@lazy button
     }
 
+    private val systemButton2 by lazy {
+        val button = Button(this)
+        button.text = "这是系统window2222啊啊啊啊啊啊"
+        button.setOnClickListener {
+            wm.removeView(it)
+            isSystem2WindowShow = isSystem2WindowShow.not()
+        }
+        return@lazy button
+    }
+
     private val wm by lazy {
         getSystemService(WindowManager::class.java) as WindowManager
     }
@@ -71,13 +83,34 @@ class WindowSampleActivity : AppCompatActivity() {
             isInnerWindowShow = isInnerWindowShow.not()
         }
 
+        // 同一级别的window,最后创建的显示在最外层
         btn_system_window.setOnClickListener {
             if(Settings.canDrawOverlays(this)) {
                 // 和SDK版本有关 todo 待调研
-                // 崩溃。Permission denied 26 28
-                // 通过。23 24 25
-                showOrHideWindow(systemButton, WindowManager.LayoutParams.TYPE_SYSTEM_ALERT, isSystemWindowShow)
+                val type = if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+                } else {
+                    WindowManager.LayoutParams.TYPE_SYSTEM_ALERT
+                }
+                showOrHideWindow(systemButton, type, isSystemWindowShow)
                 isSystemWindowShow = isSystemWindowShow.not()
+            } else {
+                val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION)
+                intent.data = Uri.parse("package:$packageName")
+                startActivityForResult(intent, CODE_REQUEST_ALERT_PERMISSION)
+            }
+        }
+
+        btn_system_window2.setOnClickListener {
+            if(Settings.canDrawOverlays(this)) {
+                // 和SDK版本有关 todo 待调研
+                val type = if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY
+                } else {
+                    WindowManager.LayoutParams.TYPE_SYSTEM_ALERT
+                }
+                showOrHideWindow(systemButton2, type, isSystem2WindowShow)
+                isSystem2WindowShow = isSystem2WindowShow.not()
             } else {
                 val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION)
                 intent.data = Uri.parse("package:$packageName")

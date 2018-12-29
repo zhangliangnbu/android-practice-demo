@@ -188,8 +188,19 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".TextViewActivity"
-                  android:label="TextViewSample"
+        <activity
+                android:name=".TextViewActivity"
+                android:label="TextViewSample"
+                android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".AnimationSampleActivity"
+                  android:label="AnimationSample"
                   android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.RUN"/>

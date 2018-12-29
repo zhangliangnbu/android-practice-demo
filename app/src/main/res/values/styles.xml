@@ -14,6 +14,9 @@
 
     <style name="NormalButton">
         <item name="android:background">@drawable/shape_button_normal</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:stateListAnimator">@animator/selector_animate_scale</item>
     </style>
 
 

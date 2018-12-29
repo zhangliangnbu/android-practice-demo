@@ -1,81 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".TextViewActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextViewActivity">
 
     <TextView
-            android:id="@+id/tv_turn_comments"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:text="第一个评论第一个评论第一个评论第一个评论第一个评论第一个评论"
-            android:background="@color/white"
-            android:ellipsize="marquee"
-            android:focusable="true"
-            android:marqueeRepeatLimit="marquee_forever"/>
+        android:id="@+id/tv_turn_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="第一个评论第一个评论第一个评论第一个评论第一个评论第一个评论"
+        android:background="@color/white"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"/>
 
     <TextSwitcher
-            android:id="@+id/ts_turn_comments"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:background="@color/white"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_turn_comments"
-            android:layout_marginTop="10dp"/>
+        android:id="@+id/ts_turn_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_turn_comments"
+        android:layout_marginTop="10dp"/>
 
     <com.superluo.textbannerlibrary.TextBannerView
-            android:id="@+id/tv_banner"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:background="#cc8ac6"
-            app:setGravity="right"
-            app:setTextColor="#fff"
-            app:setSingleLine="true"
-            app:layout_constraintTop_toBottomOf="@id/ts_turn_comments"
-            app:layout_constraintLeft_toLeftOf="parent"/>
+        android:id="@+id/tv_banner"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="#cc8ac6"
+        app:setGravity="right"
+        app:setTextColor="#fff"
+        app:setSingleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/ts_turn_comments"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <android.support.constraint.ConstraintLayout
-            android:id="@+id/cl_anim"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@id/tv_banner"
-            android:background="@color/white">
+        android:id="@+id/cl_anim"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_banner"
+        android:background="@color/white">
         <TextView
-                android:id="@+id/tv_anim"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                app:layout_constraintLeft_toRightOf="parent"
-                android:singleLine="true"
-                android:text="tv1dddddddd"/>
+            android:id="@+id/tv_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toRightOf="parent"
+            android:singleLine="true"
+            android:text="tv1dddddddd"/>
 
         <TextView
-                android:id="@+id/tv_anim2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                app:layout_constraintLeft_toRightOf="parent"
-                android:singleLine="true"
-                android:text="tv2"/>
+            android:id="@+id/tv_anim2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toRightOf="parent"
+            android:singleLine="true"
+            android:text="tv2"/>
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
-            android:id="@+id/cl_anim2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@id/cl_anim"
-            android:background="@color/white">
+        android:id="@+id/cl_anim2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/cl_anim"
+        android:background="@color/white">
 
     </android.support.constraint.ConstraintLayout>
-
 
 
 </android.support.constraint.ConstraintLayout>
