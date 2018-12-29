@@ -1,4 +1,4 @@
-package com.liang.androidskilldemo.window
+package com.liang.androidskilldemo
 
 import android.content.Intent
 import android.graphics.PixelFormat
@@ -11,7 +11,6 @@ import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
-import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_window_sample.*
 
 class WindowSampleActivity : AppCompatActivity() {
@@ -97,7 +96,9 @@ class WindowSampleActivity : AppCompatActivity() {
             } else {
                 val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION)
                 intent.data = Uri.parse("package:$packageName")
-                startActivityForResult(intent, CODE_REQUEST_ALERT_PERMISSION)
+                startActivityForResult(intent,
+                    CODE_REQUEST_ALERT_PERMISSION
+                )
             }
         }
 
@@ -114,7 +115,9 @@ class WindowSampleActivity : AppCompatActivity() {
             } else {
                 val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION)
                 intent.data = Uri.parse("package:$packageName")
-                startActivityForResult(intent, CODE_REQUEST_ALERT_PERMISSION)
+                startActivityForResult(intent,
+                    CODE_REQUEST_ALERT_PERMISSION
+                )
             }
         }
     }
