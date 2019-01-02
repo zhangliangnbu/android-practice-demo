@@ -112,6 +112,32 @@
             android:layout_height="wrap_content"
             android:text="by xml"
             android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="animation drawable"
+            android:padding="5dp"
+            android:background="@color/gray"/>
+        <ImageView
+            android:id="@+id/iv_animation_drawable"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            tools:src="@drawable/ic_close"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="animation vector drawable"
+            android:padding="5dp"
+            android:background="@color/gray"/>
+        <ImageView
+            android:id="@+id/iv_anim_vector_drawable"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/animvectordrawable"
+            android:layout_margin="10dp"/>
     </LinearLayout>
 
 

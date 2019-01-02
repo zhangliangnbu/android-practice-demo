@@ -4,6 +4,8 @@ import android.animation.AnimatorInflater
 import android.animation.Keyframe
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
+import android.graphics.drawable.AnimatedVectorDrawable
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -15,10 +17,14 @@ class AnimationSampleActivity : AppCompatActivity() {
         private const val TAG = "AnimationSample"
     }
 
+    private lateinit var animationDrawable: AnimationDrawable
+    private lateinit var animatedVectorDrawable: AnimatedVectorDrawable
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animation_sample)
 
+        // property animation
         // layout change transition
         cl_transition.layoutTransition
         tv_first.visibility = View.VISIBLE
@@ -47,10 +53,10 @@ class AnimationSampleActivity : AppCompatActivity() {
 
         // view property animator for multi animation
         btn_view_property_animator.setOnClickListener {
-            btn_view_property_animator.animate()
-                .translationXBy(50f)
-                .translationYBy(100f)
-                .translationZBy(3f)
+            it.animate()
+                    .translationXBy(50f)
+                    .translationYBy(100f)
+                    .translationZBy(3f)
         }
 
         // by xml
@@ -61,12 +67,35 @@ class AnimationSampleActivity : AppCompatActivity() {
                 start()
             }
         }
+
+        // -----drawable animation----
+        // animation drawable
+        iv_animation_drawable.apply {
+            setBackgroundResource(R.drawable.al_animation_drawable_smaple)
+            animationDrawable = background as AnimationDrawable
+        }
+        iv_animation_drawable.setOnClickListener {
+            if (animationDrawable.isRunning) {
+                animationDrawable.stop()
+            }
+            animationDrawable.start()
+        }
+
+        iv_anim_vector_drawable.apply {
+            animatedVectorDrawable = background as AnimatedVectorDrawable
+        }
+        iv_anim_vector_drawable.setOnClickListener {
+            if(animatedVectorDrawable.isRunning) {
+                animatedVectorDrawable.stop()
+            }
+            animatedVectorDrawable.start()
+        }
     }
 
 
-    private fun showOrHide(view:View) {
+    private fun showOrHide(view: View) {
         view.apply {
-            visibility = if(visibility == View.VISIBLE) {
+            visibility = if (visibility == View.VISIBLE) {
                 View.GONE
             } else {
                 View.VISIBLE
