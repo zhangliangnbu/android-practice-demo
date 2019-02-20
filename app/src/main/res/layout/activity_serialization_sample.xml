@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ipc.SerializationSampleActivity">
+
+    <Button
+        android:id="@+id/btn_serialization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="序列化-serialization"/>
+
+    <Button
+        android:id="@+id/btn_deserialization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="反序列化-deserialization"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_deserialization_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="反序列化-deserialization result"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_parcelable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="序列化-parcelable"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_deparcelable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="反序列化-deparcelable"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_deparcelable_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="反序列化-deparcelable result"
+        android:layout_marginTop="10dp"/>
+
+
+
+</LinearLayout>

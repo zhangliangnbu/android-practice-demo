@@ -4,7 +4,6 @@
           xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
@@ -16,6 +15,109 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name=".wechat.WechatScanSampleActivity"
+            android:label="WechatScanSample"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ipc.SerializableSample2Activity"
+            android:label="SerializationSample">
+        </activity>
+        <activity
+            android:name=".ipc.SerializationSampleActivity"
+            android:label="SerializationSample"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LooperSampleActivity"
+            android:label="LooperSampleSample"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ImageAdjustActivity"
+            android:label="ImageAdjustSample"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".act.FragmentSampleActivity"
+            android:label="FragmentSample"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".act.AppLinkActivity"
+            android:label="AppLinkSample"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample"/>
+            </intent-filter>
+            <intent-filter android:label="link_filter_1">
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
+                <data
+                    android:host="www.example.com"
+                    android:pathPrefix="/gizmos"
+                    android:scheme="http"/>
+                <!-- note that the leading "/" is required for pathPrefix -->
+            </intent-filter>
+            <intent-filter android:label="link_filter_1">
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!-- Accepts URIs that begin with "example://gizmos” -->
+                <data
+                    android:host="gizmos"
+                    android:scheme="example"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LayoutErrorActivity"
+            android:label="LayoutErrorSample"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -35,7 +137,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CheckBoxActivity"
+            android:name=".WidgetActivity"
             android:label="CheckBoxSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
@@ -220,6 +322,59 @@
                 <category android:name="com.liang.skilldemo.Sample"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".AnimationSample2Activity"
+            android:label="AnimationSample2"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ResourceSampleActivity"
+            android:label="ResourceSample"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".act.ActLearnActivity"
+            android:label="ActLearnSample">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".act.ActLearnNextActivity"
+            android:label="ActLearnNextSample"
+            android:launchMode="singleTask">
+
+            <!-- android:taskAffinity="com.liang.androidskilldemo.actnext" -->
+        </activity>
+        <activity
+            android:name=".act.ActLearnThirdActivity"
+            android:label="ActLearnThirdSample"
+            android:launchMode="singleTask"/> <!-- android:taskAffinity="com.liang.androidskilldemo.actthird" -->
+        <activity
+            android:name=".act.ActLearnForthActivity"
+            android:label="ActLearnForthSample"/>
+        <activity
+            android:name=".act.ActLearnFifthActivity"
+            android:label="ActLearnFifthSample"
+            android:launchMode="singleTask">
+
+            <!-- android:taskAffinity="com.liang.androidskilldemo.actfifth" -->
         </activity>
     </application>
 

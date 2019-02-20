@@ -1,5 +1,6 @@
 package com.liang.androidskilldemo
 
+import android.app.ActivityOptions
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
@@ -45,7 +46,9 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "packageName/activityName : ${acInfo.applicationInfo.packageName}-/-${acInfo.name}")
         val intent = Intent(Intent.ACTION_VIEW)
         intent.component = componentName
-        startActivity(intent)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+//        startActivity(intent)
     }
 
     internal inner class ResolveInfoAdapter(context : Context, private val resolves : List<ResolveInfo>) : RecyclerView.Adapter<ResolveInfoAdapter.ResolveInfoViewHolder>() {

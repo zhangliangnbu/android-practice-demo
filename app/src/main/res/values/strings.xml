@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">AndroidSkillDemo</string>
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+    </string-array>
+
+    <!--quantity strings-->
+    <plurals name="numberOfSongsAvailable">
+        <item quantity="one">%d song found.</item>
+        <item quantity="other">%d songs found.</item>
+    </plurals>
+
+    <!--html markup-->
+    <string name="welcome">Welcome to <b>Android</b>!
+        <big>twenty five</big>
+        <font color="#ff00ff" face="serif">red color</font>
+        <u>underline</u>
+    </string>
+
+    <!--values/strings.xml-->
+    <string name="title_test">Best practices for <annotation font="title_emphasis">text</annotation> on Android
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

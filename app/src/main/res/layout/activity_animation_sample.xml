@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,130 +14,207 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="layout transition"
             android:background="@color/gray"
-            android:padding="5dp"/>
+            android:padding="5dp"
+            android:text="layout transition" />
+
         <android.support.constraint.ConstraintLayout
             android:id="@+id/cl_transition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:animateLayoutChanges="true">
+            android:animateLayoutChanges="true"
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/tv_first"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="first text"
+                android:background="@color/green"
                 android:padding="5dp"
-                android:textColor="@color/white"
-                android:background="@color/green"/>
+                android:text="first text"
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/tv_second"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="second text"
-                android:padding="5dp"
+                android:layout_marginLeft="10dp"
                 android:background="@color/green"
+                android:padding="5dp"
+                android:text="second text"
                 android:textColor="@color/white"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginLeft="10dp"/>
+                app:layout_constraintRight_toRightOf="parent" />
 
             <Button
                 android:id="@+id/btn_transition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
                 android:text="show or hide"
                 android:textColor="@color/white"
-                android:padding="10dp"
-                app:layout_constraintTop_toBottomOf="@id/tv_first"
-                android:layout_marginTop="10dp"/>
+                app:layout_constraintTop_toBottomOf="@id/tv_first" />
         </android.support.constraint.ConstraintLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="state animator"
+            android:background="@color/gray"
             android:padding="5dp"
-            android:background="@color/gray"/>
+            android:text="state animator" />
+
         <Button
             android:id="@+id/btn_state_list_animator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="state list animator"
             android:layout_margin="10dp"
-            android:textColor="@color/white"
+            android:padding="10dp"
             android:stateListAnimator="@animator/selector_animate_scale"
-            android:padding="10dp"/>
+            android:text="state list animator"
+            android:textColor="@color/white" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="key frame animator"
+            android:background="@color/gray"
             android:padding="5dp"
-            android:background="@color/gray"/>
+            android:text="key frame animator" />
+
         <Button
             android:id="@+id/btn_key_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="key frame animator"
             android:layout_margin="10dp"
-            android:textColor="@color/white"
+            android:padding="10dp"
             android:stateListAnimator="@animator/selector_animate_scale"
-            android:padding="10dp"/>
+            android:text="key frame animator"
+            android:textColor="@color/white" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="vie property animator"
+            android:background="@color/gray"
             android:padding="5dp"
-            android:background="@color/gray"/>
+            android:text="vie property animator" />
+
         <Button
             android:id="@+id/btn_view_property_animator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="view property_animator"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:text="view property_animator" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="animation by xml"
+            android:background="@color/gray"
             android:padding="5dp"
-            android:background="@color/gray"/>
+            android:text="animation by xml" />
+
         <Button
             android:id="@+id/btn_animation_by_xml"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="by xml"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:text="by xml" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="animation drawable"
+            android:background="@color/gray"
             android:padding="5dp"
-            android:background="@color/gray"/>
+            android:text="animation drawable" />
+
         <ImageView
             android:id="@+id/iv_animation_drawable"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            tools:src="@drawable/ic_close"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            tools:src="@drawable/ic_close" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="animation vector drawable"
+            android:background="@color/gray"
             android:padding="5dp"
-            android:background="@color/gray"/>
+            android:text="animation vector drawable" />
+
         <ImageView
             android:id="@+id/iv_anim_vector_drawable"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:background="@drawable/animvectordrawable"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:background="@drawable/animvectordrawable_aapt" >
+            <requestFocus/>
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:padding="5dp"
+            android:text="cross fade" />
+
+        <FrameLayout
+            android:id="@+id/layout_cross_fade"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/sv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="?android:textAppearanceMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingMultiplier="1.2"
+                    android:padding="16dp"
+                    android:text="Reveal or hide a view using animation" />
+
+            </ScrollView>
+
+            <ProgressBar
+                android:id="@+id/pb_loading_spinner"
+                style="?android:progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_circular_anim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:padding="5dp"
+            android:text="circular anim" />
+
+        <ImageView
+            android:id="@+id/iv_circular_anim"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_circle_red" />
+
+        <TextView
+            android:id="@+id/tv_move_anim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:padding="5dp"
+            android:text="circular anim" />
+
+        <ImageView
+            android:id="@+id/iv_move_anim"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_circle_blue" />
+
+
     </LinearLayout>
 
 

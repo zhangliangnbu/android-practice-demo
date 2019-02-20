@@ -121,5 +121,4 @@ object FileUtils {
     private fun isMediaDocument(uri: Uri): Boolean {
         return "com.android.providers.media.documents" == uri.authority
     }
-
 }

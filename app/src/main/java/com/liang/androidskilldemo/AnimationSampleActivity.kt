@@ -90,6 +90,7 @@ class AnimationSampleActivity : AppCompatActivity() {
             }
             animatedVectorDrawable.start()
         }
+
     }
 
 

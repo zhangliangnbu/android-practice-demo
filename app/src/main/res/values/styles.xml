@@ -10,6 +10,14 @@
         <!--覆盖主题样式-->
         <item name="android:colorBackground">@color/white_light</item>
         <item name="buttonStyle">@style/NormalButton</item>
+
+        <!--transition-->
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowEnterTransition">@android:transition/fade</item>
+        <item name="android:windowExitTransition">@android:transition/fade</item>
+
+        <!--<item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>-->
+        <!--<item name="android:windowExitAnimation">@android:anim/slide_out_right</item>-->
     </style>
 
     <style name="NormalButton">

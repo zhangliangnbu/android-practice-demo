@@ -9,7 +9,8 @@
         android:drawable="@drawable/shape_circle_green"
         android:gravity="center"
         android:left="0dp"
-        android:top="0dp">
+        android:top="0dp"
+        android:bottom="10dp">
     </item>
     <item
         android:drawable="@drawable/shape_circle_blue"
