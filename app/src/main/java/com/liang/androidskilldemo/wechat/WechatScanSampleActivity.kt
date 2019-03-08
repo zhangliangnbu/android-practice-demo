@@ -14,7 +14,7 @@ class WechatScanSampleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wechat_scan_sample)
 
-        btn_to_scan.setOnClickListener { toScan() }
+        btn_to_scan.setOnClickListener { toScan2() }
 
     }
 
@@ -27,10 +27,12 @@ class WechatScanSampleActivity : AppCompatActivity() {
     @SuppressLint("WrongConstant")
     private fun toScan2() {
         val intent = Intent()
-        intent.setComponent(ComponentName("com.tencent.mm", "com.tencent.mm.ui.LauncherUI"));
-        intent.putExtra("LauncherUI.From.Scaner.Shortcut", true);
-        intent.setFlags(335544320)
-        intent.setAction("android.intent.action.VIEW");
-        this.startActivity(intent);
+        intent.component = ComponentName("com.tencent.mm", "com.tencent.mm.ui.LauncherUI")
+        intent.putExtra("LauncherUI.From.Scaner.Shortcut", true)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        intent.action = "android.intent.action.VIEW"
+        this.startActivity(intent)
     }
+
+
 }

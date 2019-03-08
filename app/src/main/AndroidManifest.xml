@@ -15,6 +15,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".visible.FragmentVisibleSampleActivity"
+                  android:label="FragmentVisibleSample"
+                  android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample"/>
+            </intent-filter>
+        </activity>
         <activity
             android:name=".wechat.WechatScanSampleActivity"
             android:label="WechatScanSample"
