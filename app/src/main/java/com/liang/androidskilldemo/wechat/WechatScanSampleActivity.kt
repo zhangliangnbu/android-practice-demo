@@ -4,11 +4,12 @@ import android.annotation.SuppressLint
 import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_wechat_scan_sample.*
 
 class WechatScanSampleActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

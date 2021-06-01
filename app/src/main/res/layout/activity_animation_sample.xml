@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,7 +19,7 @@
             android:padding="5dp"
             android:text="layout transition" />
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_transition"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,7 +33,9 @@
                 android:background="@color/green"
                 android:padding="5dp"
                 android:text="first text"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
                 android:id="@+id/tv_second"
@@ -43,6 +46,7 @@
                 android:padding="5dp"
                 android:text="second text"
                 android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintRight_toRightOf="parent" />
 
             <Button
@@ -53,8 +57,9 @@
                 android:padding="10dp"
                 android:text="show or hide"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/tv_first" />
-        </android.support.constraint.ConstraintLayout>
+                app:layout_constraintTop_toBottomOf="@id/tv_first"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -144,7 +149,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"
-            android:background="@drawable/animvectordrawable_aapt" >
+            android:background="@drawable/animvectordrawable" >
             <requestFocus/>
         </ImageView>
 
@@ -218,4 +223,4 @@
     </LinearLayout>
 
 
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView >

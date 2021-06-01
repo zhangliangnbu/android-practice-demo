@@ -7,7 +7,7 @@ import android.animation.PropertyValuesHolder
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_animation_sample.*
@@ -26,7 +26,7 @@ class AnimationSampleActivity : AppCompatActivity() {
 
         // property animation
         // layout change transition
-        cl_transition.layoutTransition
+//        cl_transition.layoutTransition
         tv_first.visibility = View.VISIBLE
         tv_second.visibility = View.GONE
         btn_transition.setOnClickListener {

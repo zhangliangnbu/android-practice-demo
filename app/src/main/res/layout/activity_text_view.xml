@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@id/ts_turn_comments"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_anim"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -64,9 +64,9 @@
             app:layout_constraintLeft_toRightOf="parent"
             android:singleLine="true"
             android:text="tv2"/>
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_anim2"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@id/cl_anim"
         android:background="@color/white">
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

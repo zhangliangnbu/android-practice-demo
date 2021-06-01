@@ -2,13 +2,13 @@ package com.liang.androidskilldemo
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
-import android.support.constraint.ConstraintLayout
-import android.support.constraint.ConstraintSet
-import android.support.v7.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.appcompat.app.AppCompatActivity
 import android.util.DisplayMetrics
 import android.view.Gravity
 import android.view.View
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintSet
 import kotlinx.android.synthetic.main.activity_text_view.*
 
 class TextViewActivity : AppCompatActivity() {

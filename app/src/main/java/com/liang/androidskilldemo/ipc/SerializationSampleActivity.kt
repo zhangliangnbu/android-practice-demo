@@ -1,7 +1,7 @@
 package com.liang.androidskilldemo.ipc
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_serialization_sample.*
 

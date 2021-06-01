@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.Message
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_looper_sample.*
 
@@ -30,7 +30,7 @@ class LooperSampleActivity : AppCompatActivity() {
             }
 
             val handler = object : Handler() {
-                override fun handleMessage(msg: Message?) {
+                override fun handleMessage(msg: Message) {
                     super.handleMessage(msg)
                     Log.d(TAG, "msg from handle $msg")
                 }

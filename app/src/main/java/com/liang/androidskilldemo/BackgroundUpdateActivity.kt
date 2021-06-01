@@ -2,10 +2,10 @@ package com.liang.androidskilldemo
 
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_background_update.*
 import java.text.SimpleDateFormat
 import java.util.*

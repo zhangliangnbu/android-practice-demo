@@ -9,7 +9,7 @@ import android.graphics.Point
 import android.graphics.Rect
 import android.graphics.RectF
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.transition.AutoTransition
 import android.transition.Scene
 import android.transition.TransitionManager

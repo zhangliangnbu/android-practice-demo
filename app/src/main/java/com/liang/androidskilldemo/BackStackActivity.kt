@@ -9,8 +9,8 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.provider.Settings
-import android.support.v4.content.PermissionChecker
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.PermissionChecker
 import kotlinx.android.synthetic.main.activity_back_stack.*
 
 class BackStackActivity : AppCompatActivity() {
@@ -37,8 +37,8 @@ class BackStackActivity : AppCompatActivity() {
         am.runningAppProcesses
         am.appTasks
         am.getRunningTasks(20).forEach { info ->
-            println("${info.baseActivity.packageName}:${info.baseActivity.shortClassName}")
-            text.plus("${info.baseActivity.packageName}:${info.baseActivity.shortClassName} \n")
+            println("${info.baseActivity?.packageName}:${info.baseActivity?.shortClassName}")
+            text.plus("${info.baseActivity?.packageName}:${info.baseActivity?.shortClassName} \n")
         }
 
         tv_tasks.text = text

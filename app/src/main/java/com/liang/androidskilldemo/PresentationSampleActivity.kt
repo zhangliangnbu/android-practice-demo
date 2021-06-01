@@ -4,7 +4,7 @@ import android.app.Presentation
 import android.content.Context
 import android.hardware.display.DisplayManager
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.view.Display
 import kotlinx.android.synthetic.main.activity_presentation_sample.*
 

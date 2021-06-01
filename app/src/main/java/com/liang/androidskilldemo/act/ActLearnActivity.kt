@@ -3,7 +3,7 @@ package com.liang.androidskilldemo.act
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_act_learn.*
@@ -58,12 +58,12 @@ class ActLearnActivity : AppCompatActivity() {
         super.onDestroy()
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         Log.d(TAG, "onRestoreInstanceState")
         super.onRestoreInstanceState(savedInstanceState)
     }
 
-    override fun onSaveInstanceState(outState: Bundle?, outPersistentState: PersistableBundle?) {
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
         Log.d(TAG, "onSaveInstanceState")
         super.onSaveInstanceState(outState, outPersistentState)
     }

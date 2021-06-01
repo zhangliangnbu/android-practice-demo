@@ -1,10 +1,10 @@
 package com.liang.androidskilldemo.visible
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentStatePagerAdapter
-import android.support.v7.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.appcompat.app.AppCompatActivity
 import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_fragment_visible_sample.*
 

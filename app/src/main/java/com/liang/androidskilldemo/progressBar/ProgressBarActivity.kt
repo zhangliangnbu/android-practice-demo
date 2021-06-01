@@ -1,7 +1,7 @@
 package com.liang.androidskilldemo.progressBar
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_progress_bar.*
