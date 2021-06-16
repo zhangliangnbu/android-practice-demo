@@ -5,7 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import android.util.Log
+import com.orhanobut.logger.Logger
 import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_bitmap_adjust.*
 import utils.BitmapUtils
@@ -56,7 +56,7 @@ class BitmapAdjustActivity : AppCompatActivity() {
     }
 
     private fun printBitmapInfo(tag: String, bitmap: Bitmap) {
-        Log.d(tag, "大小=${bitmap.byteCount / 1024f / 1024f}MB, 宽=${bitmap.width}, 高=${bitmap.height}")
+        Logger.d(tag, "大小=${bitmap.byteCount / 1024f / 1024f}MB, 宽=${bitmap.width}, 高=${bitmap.height}")
     }
 
     private fun addPicture() {

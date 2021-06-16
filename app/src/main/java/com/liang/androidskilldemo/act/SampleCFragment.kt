@@ -10,13 +10,17 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.liang.androidskilldemo.R
+import kotlinx.android.synthetic.main.fragment_sample_c.*
 
 
 /**
  * A simple [Fragment] subclass.
  *
  */
-class SampleAFragment : Fragment() {
+class SampleCFragment : Fragment() {
+
+    private var TAG = ""
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         Logger.d(TAG, "onAttach")
@@ -31,12 +35,24 @@ class SampleAFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         Logger.d(TAG, "onCreateView")
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sample_a, container, false)
+        return inflater.inflate(R.layout.fragment_sample_c, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Logger.d(TAG )
+    }
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedInstanceState)
+        Logger.d(TAG)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         Logger.d(TAG, "onActivityCreated")
+        val text = arguments?.getString(FRAGMENT_NAME, "Default") ?: return
+        tvFragmentTag.text = text
     }
 
     override fun onStart() {
@@ -75,7 +91,7 @@ class SampleAFragment : Fragment() {
     }
 
     companion object {
-        private const val TAG = ""
+        public const val FRAGMENT_NAME = "fragment_name"
     }
 
 

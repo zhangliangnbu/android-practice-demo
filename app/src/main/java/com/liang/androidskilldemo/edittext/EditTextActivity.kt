@@ -2,7 +2,7 @@ package com.liang.androidskilldemo.edittext
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import android.util.Log
+import com.orhanobut.logger.Logger
 import android.view.View
 import com.liang.androidskilldemo.R
 import kotlinx.android.synthetic.main.activity_edit_text.*
@@ -53,7 +53,7 @@ class EditTextActivity : AppCompatActivity() {
         val count = group_test.childCount
         for (i in 0 until count) {
             val child = group_test.getChildAt(i)
-            Log.d(TAG, child.javaClass.typeName)
+            Logger.d(TAG, child.javaClass.typeName)
         }
 
     }

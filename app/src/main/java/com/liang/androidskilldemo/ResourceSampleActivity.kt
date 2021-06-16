@@ -2,7 +2,7 @@ package com.liang.androidskilldemo
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import android.util.Log
+import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.activity_resource_sample.*
 
 class ResourceSampleActivity : AppCompatActivity() {
@@ -18,10 +18,10 @@ class ResourceSampleActivity : AppCompatActivity() {
 //        val list = assets.list("")
 //        val list = resources.assets.list("")
 //        list?.forEach {
-//            Log.d(TAG, it)
+//            Logger.d(TAG, it)
 //        }
         assets.list("images")?.forEach {
-            Log.d(TAG, it)
+            Logger.d(TAG, it)
         }
 
         val count = 2

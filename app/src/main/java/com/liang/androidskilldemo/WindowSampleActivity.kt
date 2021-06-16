@@ -7,7 +7,7 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
 import androidx.appcompat.app.AppCompatActivity
-import android.util.Log
+import com.orhanobut.logger.Logger
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
@@ -139,15 +139,15 @@ class WindowSampleActivity : AppCompatActivity() {
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == CODE_REQUEST_ALERT_PERMISSION) {
-            Log.d(TAG, permissions.contentToString())
-            Log.d(TAG, grantResults.contentToString())
+            Logger.d(TAG, permissions.contentToString())
+            Logger.d(TAG, grantResults.contentToString())
         }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == CODE_REQUEST_ALERT_PERMISSION) {
-            Log.d(TAG, resultCode.toString())
+            Logger.d(TAG, resultCode.toString())
         }
     }
 }

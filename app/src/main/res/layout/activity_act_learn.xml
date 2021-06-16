@@ -21,4 +21,34 @@
         android:layout_marginTop="10dp"
         android:text="new stack activity"/>
 
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        />
+
+    <Button
+        android:id="@+id/btn_changeTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="click to change test value"/>
+
+    <TextView
+        android:id="@+id/btn_showTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:clickable="false"
+        style="@style/NormalButton"/>
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="关闭当前页面"/>
+
 </LinearLayout>

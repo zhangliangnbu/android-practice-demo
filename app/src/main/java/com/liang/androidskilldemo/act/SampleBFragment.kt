@@ -4,7 +4,7 @@ package com.liang.androidskilldemo.act
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.util.Log
+import com.orhanobut.logger.Logger
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,17 +21,17 @@ class SampleBFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Log.d(TAG, "onAttach -> $context")
+        Logger.d(TAG, "onAttach -> $context")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "onCreate -> $activity")
+        Logger.d(TAG, "onCreate -> $activity")
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        Log.d(TAG, "onActivityCreated  -> $activity")
+        Logger.d(TAG, "onActivityCreated  -> $activity")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,48 +44,48 @@ class SampleBFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        Log.d(TAG, "onCreateView")
+        Logger.d(TAG, "onCreateView")
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_sample_b, container, false)
     }
 
     override fun onStart() {
         super.onStart()
-        Log.d(TAG, "onStart")
+        Logger.d(TAG, "onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d(TAG, "onResume")
+        Logger.d(TAG, "onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d(TAG, "onPause")
+        Logger.d(TAG, "onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d(TAG, "onStop")
+        Logger.d(TAG, "onStop")
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.d(TAG, "onDestroyView")
+        Logger.d(TAG, "onDestroyView")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(TAG, "onDestroy")
+        Logger.d(TAG, "onDestroy")
     }
 
     override fun onDetach() {
         super.onDetach()
-        Log.d(TAG, "onDetach")
+        Logger.d(TAG, "onDetach")
     }
 
     companion object {
-        private const val TAG = "SampleFragmentB"
+        private const val TAG = ""
     }
 
 

@@ -16,7 +16,7 @@ import com.liang.androidskilldemo.R
  * A simple [Fragment] subclass.
  *
  */
-class SampleAFragment : Fragment() {
+class SampleDFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         Logger.d(TAG, "onAttach")
@@ -31,7 +31,7 @@ class SampleAFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
         Logger.d(TAG, "onCreateView")
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sample_a, container, false)
+        return inflater.inflate(R.layout.fragment_sample_d, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

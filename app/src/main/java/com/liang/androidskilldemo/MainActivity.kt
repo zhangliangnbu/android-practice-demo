@@ -9,7 +9,7 @@ import android.content.pm.ResolveInfo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
-import android.util.Log
+import com.orhanobut.logger.Logger
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
     fun toActivity(resolve: ResolveInfo) {
         val acInfo = resolve.activityInfo
         val componentName = ComponentName(acInfo.applicationInfo.packageName, acInfo.name)
-        Log.d(TAG, "packageName/activityName : ${acInfo.applicationInfo.packageName}-/-${acInfo.name}")
+        Logger.d(TAG, "packageName/activityName : ${acInfo.applicationInfo.packageName}-/-${acInfo.name}")
         val intent = Intent(Intent.ACTION_VIEW)
         intent.component = componentName
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK

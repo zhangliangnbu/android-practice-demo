@@ -3,7 +3,7 @@ package com.liang.androidskilldemo.visible
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.util.Log
+import com.orhanobut.logger.Logger
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,22 +49,22 @@ class VisibleSampleFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        Log.i(tag(), "onResume")
+        Logger.d(tag(), "onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.i(tag(), "onPause")
+        Logger.d(tag(), "onPause")
     }
 
     override fun setUserVisibleHint(isVisibleToUser: Boolean) {
         super.setUserVisibleHint(isVisibleToUser)
-        Log.i(tag(), "setUserVisibleHint isVisibleToUser:$isVisibleToUser")
+        Logger.d(tag(), "setUserVisibleHint isVisibleToUser:$isVisibleToUser")
     }
 
     override fun onHiddenChanged(hidden: Boolean) {
         super.onHiddenChanged(hidden)
-        Log.i(tag(), "onHiddenChanged hidden:$hidden")
+        Logger.d(tag(), "onHiddenChanged hidden:$hidden")
     }
 
     private fun tag(): String = "fragment-$param1->"

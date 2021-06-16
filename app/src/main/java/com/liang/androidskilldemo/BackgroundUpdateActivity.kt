@@ -3,7 +3,7 @@ package com.liang.androidskilldemo
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
-import android.util.Log
+import com.orhanobut.logger.Logger
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_background_update.*
@@ -19,7 +19,7 @@ class BackgroundUpdateActivity : AppCompatActivity() {
         btn_trigger.setOnClickListener {
             Handler().postDelayed({
                 val date = SimpleDateFormat("yyyy/MM/dd hh:mm:ss", Locale.CHINA).format(Date())
-                Log.d("background update->", "开始更新啦$date")
+                Logger.d("background update->", "开始更新啦$date")
                 tv_back_update.text = "$date"
                 tv_back_update.visibility = View.GONE
                 AlertDialog.Builder(this)

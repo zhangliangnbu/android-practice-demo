@@ -12,8 +12,11 @@ class ActLearnThirdActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_act_learn_third)
         btn_next.setOnClickListener {
-            val intent = Intent(this, ActLearnForthActivity::class.java).apply {
-//                flags = Intent.FLAG_ACTIVITY_NEW_TASK
+//            val intent = Intent(this, ActLearnForthActivity::class.java).apply {
+////                flags = Intent.FLAG_ACTIVITY_NEW_TASK
+//            }
+            val intent = Intent(this, ActLearnActivity::class.java).apply {
+//                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
             }
             startActivity(intent)
         }

@@ -25,4 +25,11 @@ class ExampleUnitTest {
         val time = df.format(Date(millis))
         println(time)
     }
+
+    @Test
+    fun testInt() {
+        var a = 0
+        a = a.inc()
+        println(a)
+    }
 }

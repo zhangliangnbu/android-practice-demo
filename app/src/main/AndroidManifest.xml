@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.liang.androidskilldemo"
-          xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.liang.androidskilldemo">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,14 +17,85 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".visible.FragmentVisibleSampleActivity"
-                  android:label="FragmentVisibleSample"
-                  android:parentActivityName=".MainActivity">
+        <activity android:name=".act.FragmentCommunicateActivity"
+            android:label="FragmentCommunicateActivity"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.liang.skilldemo.Sample"/>
+        <activity
+            android:name=".broadcast.BroadcastActivity"
+            android:label="BroadcastActivity"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".broadcast.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.liang.android_skill_demo_broadcast1" />
+                <action android:name="com.liang.androidskilldemo.ACTION1" />
+                <action android:name="android.intent.action.INPUT_METHOD_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".act.FragmentTransactionActivity"
+            android:label="FragmentTransactionActivity"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.MessengerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".service.ServiceManageActivity"
+            android:label="ServiceManageActivity"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.MyIntentService"
+            android:exported="false" />
+
+        <activity
+            android:name=".visible.FragmentVisibleSampleActivity"
+            android:label="FragmentVisibleSample"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.liang.skilldemo.Sample" />
             </intent-filter>
         </activity>
         <activity
@@ -30,25 +103,24 @@
             android:label="WechatScanSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.liang.skilldemo.Sample" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ipc.SerializableSample2Activity"
-            android:label="SerializationSample">
-        </activity>
+            android:label="SerializationSample" />
         <activity
             android:name=".ipc.SerializationSampleActivity"
             android:label="SerializationSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.liang.skilldemo.Sample" />
             </intent-filter>
         </activity>
         <activity
@@ -56,10 +128,10 @@
             android:label="LooperSampleSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.liang.skilldemo.Sample" />
             </intent-filter>
         </activity>
         <activity
@@ -67,10 +139,10 @@
             android:label="ImageAdjustSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.liang.skilldemo.Sample" />
             </intent-filter>
         </activity>
         <activity
@@ -78,10 +150,10 @@
             android:label="FragmentSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.liang.skilldemo.Sample" />
             </intent-filter>
         </activity>
         <activity
@@ -89,32 +161,32 @@
             android:label="AppLinkSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="com.liang.skilldemo.Sample"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.liang.skilldemo.Sample" />
             </intent-filter>
             <intent-filter android:label="link_filter_1">
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
                 <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
                 <data
                     android:host="www.example.com"
                     android:pathPrefix="/gizmos"
-                    android:scheme="http"/>
+                    android:scheme="http" />
                 <!-- note that the leading "/" is required for pathPrefix -->
             </intent-filter>
             <intent-filter android:label="link_filter_1">
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
                 <!-- Accepts URIs that begin with "example://gizmos” -->
                 <data
                     android:host="gizmos"
-                    android:scheme="example"/>
+                    android:scheme="example" />
             </intent-filter>
         </activity>
         <activity
@@ -122,17 +194,17 @@
             android:label="LayoutErrorSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -140,10 +212,10 @@
             android:label="ProgressBarSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -151,10 +223,10 @@
             android:label="CheckBoxSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -162,10 +234,10 @@
             android:label="GridLayoutSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -173,10 +245,10 @@
             android:label="EvenGridLayoutSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -184,10 +256,10 @@
             android:label="TagsSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -195,10 +267,10 @@
             android:label="BitmapAdjustSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -206,10 +278,10 @@
             android:label="EditTextSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -217,10 +289,10 @@
             android:label="SwitchSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -228,10 +300,10 @@
             android:label="RadioGroupSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -239,10 +311,10 @@
             android:label="BackgroundUpdateSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -250,10 +322,10 @@
             android:label="EditTextDeleteSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -261,10 +333,10 @@
             android:label="BackStackSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -272,10 +344,10 @@
             android:label="KotlinForAndroidBookSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -283,10 +355,10 @@
             android:label="DrawableSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -294,10 +366,10 @@
             android:label="WindowSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -305,10 +377,10 @@
             android:label="TextViewSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -316,10 +388,10 @@
             android:label="AnimationSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -327,10 +399,10 @@
             android:label="PresentationSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -338,10 +410,10 @@
             android:label="AnimationSample2"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -349,20 +421,24 @@
             android:label="ResourceSample"
             android:parentActivityName=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+                <action android:name="android.intent.action.RUN" />
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".act.ActLearnActivity"
-            android:label="ActLearnSample">
-            <intent-filter>
-                <action android:name="android.intent.action.RUN"/>
+            android:label="ActLearnSample"
+            android:launchMode="singleTask">
 
-                <category android:name="com.liang.skilldemo.Sample"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+            <!-- android:configChanges="orientation|screenSize" -->
+            <!-- > -->
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -375,10 +451,10 @@
         <activity
             android:name=".act.ActLearnThirdActivity"
             android:label="ActLearnThirdSample"
-            android:launchMode="singleTask"/> <!-- android:taskAffinity="com.liang.androidskilldemo.actthird" -->
+            android:launchMode="singleTask" /> <!-- android:taskAffinity="com.liang.androidskilldemo.actthird" -->
         <activity
             android:name=".act.ActLearnForthActivity"
-            android:label="ActLearnForthSample"/>
+            android:label="ActLearnForthSample" />
         <activity
             android:name=".act.ActLearnFifthActivity"
             android:label="ActLearnFifthSample"

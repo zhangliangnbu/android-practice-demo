@@ -2,7 +2,7 @@ package com.liang.androidskilldemo.tags
 
 import android.app.Activity
 import android.os.Bundle
-import android.util.Log
+import com.orhanobut.logger.Logger
 import android.widget.Toast
 import com.liang.androidskilldemo.R
 import com.light.android.taggroup.TagGroup
@@ -26,8 +26,8 @@ class TagsActivity : Activity() {
         tag_group_checkable.setTags(texts)
         tag_group_checkable.setOnTagClickListener {
             Toast.makeText(this, it, Toast.LENGTH_SHORT).show()
-            Log.d("checked-tags->", tag_group_checkable.checkedTags.toString())
-            Log.d("checked-tags->", tag_group_checkable.checkedIndexList.toString())
+            Logger.d("checked-tags->", tag_group_checkable.checkedTags.toString())
+            Logger.d("checked-tags->", tag_group_checkable.checkedIndexList.toString())
         }
 
         tag_group_delete.setTags(texts)
