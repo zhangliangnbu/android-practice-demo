@@ -3,50 +3,52 @@ package com.liang.androidskilldemo.act
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import com.orhanobut.logger.Logger
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.liang.androidskilldemo.R
-import kotlinx.android.synthetic.main.fragment_sample_b.*
+import com.orhanobut.logger.Logger
+import kotlinx.android.synthetic.main.fragment_sample_e.*
 
 
 /**
  * A simple [Fragment] subclass.
  *
  */
-class SampleBFragment : Fragment() {
-    private val dialog = SampleDialogFragment()
-
+class SampleEFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Logger.d(TAG, "onAttach -> $context")
+        Logger.d(TAG, "onAttach")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Logger.d(TAG, "onCreate -> $activity")
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        Logger.d(TAG, "onActivityCreated  -> $activity")
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        btn_show_dialog_fragment.setOnClickListener {
-            dialog.show(activity!!.supportFragmentManager!!, "dialog_sample")
-        }
+        Logger.d(TAG, "onCreate")
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         Logger.d(TAG, "onCreateView")
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sample_b, container, false)
+        return inflater.inflate(R.layout.fragment_sample_e, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        btn_send_msg.setOnClickListener { sendMsg() }
+    }
+
+    private fun sendMsg() {
+        val result = Bundle()
+        result.putString("bundleKey", "result 来啦 haha")
+        // The child fragment needs to still set the result on its parent fragment manager
+        parentFragmentManager.setFragmentResult("msgKey", result)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        Logger.d(TAG, "onActivityCreated")
     }
 
     override fun onStart() {

@@ -74,6 +74,11 @@ class SampleAFragment : Fragment() {
         Logger.d(TAG, "onDetach")
     }
 
+    override fun onHiddenChanged(hidden: Boolean) {
+        super.onHiddenChanged(hidden)
+        Logger.d(TAG, "onHiddenChanged")
+    }
+
     companion object {
         private const val TAG = ""
     }

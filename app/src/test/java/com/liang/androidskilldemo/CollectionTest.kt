@@ -19,4 +19,8 @@ class CollectionTest {
 
         assert(set.containsAll(list))
     }
+
+    @Test
+    fun testListRemove() {
+    }
 }

@@ -28,9 +28,12 @@ class FragmentTransactionActivity : AppCompatActivity() {
         }.commit()
 
         btnAddTwoFragment.setOnClickListener {
+            val a1 = createFragment()
+            val a2 = createFragment()
             supportFragmentManager.beginTransaction()
-                    .add(R.id.fl_container, createFragment())
-                    .add(R.id.fl_container, createFragment())
+                    .add(R.id.fl_container, a1)
+                    .add(R.id.fl_container, a2)
+                    .hide(a1)
                     .addToBackStack("CD$count")
                     .commit()
         }

@@ -13,10 +13,24 @@
         android:layout_height="wrap_content"
         android:text="title"/>
 
+    <Button
+        android:id="@+id/tvTitleByAPI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="title by api"/>
+
+
     <FrameLayout
         android:id="@+id/fl_container"
         android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_marginTop="80dp"/>
+
+    <FrameLayout
+        android:id="@+id/fl_container2"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="80dp"/>
+
 
 </LinearLayout>
