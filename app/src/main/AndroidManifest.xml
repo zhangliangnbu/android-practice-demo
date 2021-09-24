@@ -17,16 +17,28 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".act.FragmentCommunicateActivity"
-            android:label="FragmentCommunicateActivity"
+        <activity android:name=".performance.CPUPerformanceActivity"
+            android:label="CPUPerformanceActivity"
             android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.RUN" />
+
                 <category android:name="com.liang.skilldemo.Sample" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".act.FragmentCommunicateActivity"
+            android:label="FragmentCommunicateActivity"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.RUN" />
+
+                <category android:name="com.liang.skilldemo.Sample" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".broadcast.BroadcastActivity"
             android:label="BroadcastActivity"

@@ -17,7 +17,15 @@
         android:id="@+id/tvTitleByAPI"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="title by api"/>
+        android:text="title by api"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/testCPU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试CPU性能"
+        android:layout_marginTop="10dp"/>
 
 
     <FrameLayout

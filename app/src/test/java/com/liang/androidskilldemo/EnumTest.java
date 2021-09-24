@@ -1,7 +1,5 @@
 package com.liang.androidskilldemo;
 
-import com.liang.androidskilldemo.algorithm.SampleEnum;
-
 import org.junit.Test;
 
 /**

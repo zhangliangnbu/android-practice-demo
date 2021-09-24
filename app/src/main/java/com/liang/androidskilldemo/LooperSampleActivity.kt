@@ -14,28 +14,17 @@ class LooperSampleActivity : AppCompatActivity() {
         private const val TAG = "LooperSample->"
     }
 
+    private val demo = MultiThreadDemo()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_looper_sample)
 
         tv_hw.setOnClickListener {
-            testLooper()
+//            demo.testHandler()
+//            demo.testThreadHandler()
+//            demo.testAsyncTask()
+            demo.testRxJava()
         }
-    }
-
-    private fun testLooper() {
-        Thread(Runnable {
-            if(Looper.myLooper() == null) {
-                Looper.prepare()
-            }
-
-            val handler = object : Handler() {
-                override fun handleMessage(msg: Message) {
-                    super.handleMessage(msg)
-                    Logger.d(TAG, "msg from handle $msg")
-                }
-            }
-            handler.sendEmptyMessage(0)
-        }).start()
     }
 }

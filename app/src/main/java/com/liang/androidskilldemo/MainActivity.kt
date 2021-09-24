@@ -7,14 +7,15 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.pm.ResolveInfo
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
-import com.orhanobut.logger.Logger
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.orhanobut.logger.Logger
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +32,11 @@ class MainActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
             adapter = ResolveInfoAdapter(context, getResolves())
         }
+
+        resolve_views.postDelayed({
+            Log.d("run", "reportFullyDrawn")
+            reportFullyDrawn()
+        }, 3000L)
     }
 
     private fun getResolves() : List<ResolveInfo> {

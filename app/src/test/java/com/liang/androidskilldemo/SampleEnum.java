@@ -1,4 +1,4 @@
-package com.liang.androidskilldemo.algorithm;
+package com.liang.androidskilldemo;
 
 /**
  * created by zhangliang on 2021/6/21
